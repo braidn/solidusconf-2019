@@ -7,4 +7,16 @@ export default {
   colors: {
     background: '#f5e3e7',
   },
+  styles: {
+    blockquote: {
+      fontStyle: 'italic',
+      display: 'block',
+      borderWidth: '2px 0',
+      borderStyle: 'solid',
+      borderColor: '#eee',
+      padding: '1.5em 0 0.5em',
+      margin: '1.5em 0',
+      position: 'relative'
+    }
+  }
 }
