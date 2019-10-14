@@ -314,13 +314,24 @@ Afterwards we would stand up the new stack, import the data and roll over traffi
 
 ---
 
-# Rewrite Scare
+<Image
+src="https://media.giphy.com/media/YBbGqjnpVT7MO13tiH/giphy.gif"
+style={{
+display: 'flex',
+alignItems: 'right',
+justifyContent: 'flex-end',
+color: 'white'
+}}>
+<h2>Be Afraid!</h2>
+</Image>
 
 <Notes>
 If you aren't scared now, 
 this talk and maybe an incremental move to microservices may not be for you. 
 Most folks have gone through a move like this more than once, 
-and the idea of micrervices or an incremental move to an updated and fast system peaks all of our interests.
+and the idea of a micrervices approach or 
+an incremental move to an updated and fast system should 
+all of our interests.
 </Notes>
 
 ---
@@ -357,34 +368,44 @@ In that paper, Conway presented the following thesis about teams
 > Any organization that designs a system (defined more broadly here than just information systems) 
 > will inevitably produce a design whose structure is a copy of the organization's communication structure
 
+<Notes>
+_pause, let the crowd read the quote before starting again (take a drink of water)_
+</Notes>
+
 
 ---
 
-# A Litmus Test
+# Before the Beginning
 
 <Notes>
-Before we move directly onto microservices, 
+Before we move directly into microservices, 
 what's a good way to tell if a team is feeling the correct amount of pain to warrant the transition? 
-What's that perfect litmus test that can tell lead product owners to start this transition?
+What's that perfect litmus test that can lead product owners to start this transition?
 </Notes>
 
 ---
 
+<Split>
+
 # Who Owns What?
+
+![](https://images.unsplash.com/photo-1562701447-8ec5d514a2a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80)
+<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jentheodore?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jen Theodore"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+<title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Jen Theodore</span></a>
+
+</Split>
 
 <Notes>
 Blurred lines of ownership across teams in a monolith can lead to some 'interesting cross-team dynamics'. 
 Without clear boundaries (offered by microservices), 
 it's easy for teams to step on other team's toes, 
-be steeped in building features without clear decision making, 
-and ultimatly stagnating features that may never be deployed.
-
-
+find themselves building features without clear decision making, 
+and ultimatly stagnating without hope of production deployment
 </Notes>
 
 ---
 
-# Microservices The Very Beginning
+# The Actual Beginning
 
 <Notes>
 This is a good thing though. 
@@ -401,7 +422,7 @@ How do the 5 parts of emotional intelligence help inform successful software tea
 
 <Notes>
 Biting off the first piece of functionality might be the hardest part of this process. 
-To often though folks reach for the most painful item that's causing issues.
+Too often folks reach for the most painful item that's causing issues.
 
 Due to this, the first approach here can be the end all of this whole process. 
 
