@@ -378,9 +378,35 @@ _pause, let the crowd read the quote before starting again (take a drink of wate
 # Before the Beginning
 
 <Notes>
+# Solution 0.5
 Before we move directly into microservices, 
 what's a good way to tell if a team is feeling the correct amount of pain to warrant the transition? 
 What's that perfect litmus test that can lead product owners to start this transition?
+</Notes>
+
+---
+
+# The Actual Beginning
+
+<Notes>
+There is a required feeling or explicit pain that a team needs to have before ever thinking about moving to microservices. 
+The idea being that a freedom of data, or deployments or services will lead to a freedom of said pain. 
+
+The rest of the talk will focus purely on this world. 
+How do the 5 parts of emotional intelligence help inform successful software teams 
+to build and designs successuful starts to microservices.
+</Notes>
+
+---
+
+# Fowler Said...
+
+> almost all the cases where I’ve heard of a system that was built as a microservice system from scratch, 
+> it has ended in serious trouble… you shouldn’t start a new project with microservices, 
+> even if you’re sure your application will be big enough to make it worthwhile”.
+
+<Notes>
+Martin Fowler wrote in _Monolith First_ the above quote
 </Notes>
 
 ---
@@ -396,6 +422,8 @@ What's that perfect litmus test that can lead product owners to start this trans
 </Split>
 
 <Notes>
+# Solution 1
+
 Blurred lines of ownership across teams in a monolith can lead to some 'interesting cross-team dynamics'. 
 Without clear boundaries (offered by microservices), 
 it's easy for teams to step on other team's toes, 
@@ -405,24 +433,13 @@ and ultimatly stagnating without hope of production deployment
 
 ---
 
-# The Actual Beginning
+# Tiny Groupings Of Functionality 
 
 <Notes>
-This is a good thing though. 
-There is a required feeling or explicit pain that a team needs to have before ever thinking about moving to microservices. 
-The idea being that a freedom of data, or deployments or services will lead to a freedom of said pain. 
+# Solution 2
 
-The rest of the talk will focus purely on this world. 
-How do the 5 parts of emotional intelligence help inform successful software teams to build and designs successuful starts to microservices.
-</Notes>
-
----
-
-# Tiny Groupings Of Functionality
-
-<Notes>
 Biting off the first piece of functionality might be the hardest part of this process. 
-Too often folks reach for the most painful item that's causing issues.
+Too often folks reach for the most painful/or most 'sticky' item that's causing issues.
 
 Due to this, the first approach here can be the end all of this whole process. 
 
@@ -447,9 +464,11 @@ this is an integral part of Domain Driven Design and often times what small grou
 
 ---
 
-# Coupling 
+# Coupling (De-Coupling)
 
 <Notes>
+# Solution 3
+
 Interfaces are a natural move to reduce coupling. 
 Often times the best way to do this is to use a term known as 'outside-in' thinking.
 
@@ -458,6 +477,67 @@ Afterwards, work your way backwards to implement the service contracts.
 
 This is a classic use of empathy and something that I advocated for in building API's. 
 Coincidentally, in my past two SolidusConf talks.
+</Notes>
+
+---
+
+# Freedom of Languages
+
+<Notes>
+# Solution 4
+
+There is a large ecosystem of languages out there. 
+And when the idea to move to micrervices emerges, 
+everyone will want to re-write the world in Rust...
+or Elm. 
+
+Understanding that team churn is a very real thing that all organizations deal with, 
+means being conservative when choosing languages for a new service. 
+Build the service using some language that the team is currently 'good' at. 
+
+If the use case of the service grows beyond the capabilities of the language or platform, 
+the service layer should be small enough that a rewrite in rust is feasable.
+</Notes>
+
+---
+
+# A Package For All
+
+<Notes>
+# Solution 5
+
+When's the last time that we have published something to GemFury, GitHub or RubyGems? 
+With packaging dependencies and publishing them to consumers, 
+we create clear boundaries not only in our service layer but in our shareable code.
+
+With services running in all kinds of different environments, 
+or simply deployed 'elsewhere', 
+having sharable, 
+well tested and specific dependencies allows teams to not only move faster but, 
+Makes sharing code across applications much more doable. 
+No longer is a change to a piece of code going to create havoc in fulfillment. 
+
+Fullfillment can continue to use version 1.1 while the Aquisition team uses a more recent tagged version.
+</Notes>
+
+---
+
+# Where's Your Documentation At?
+
+<Notes>
+# Solution 6 (Final)
+
+In many scenarios, 
+an application is reliant on a constant DB to DB connection to manage interactions throughout the App. 
+This isn't and shouldn't be the case with a switch to microservices. 
+Any new, service will talk to any other service through an API layer. 
+This could be a GraphQl/REST/Protobuf layer. 
+Regardless, each service won't be sharing the Db connection.
+
+How does your team currently document the existing API layer? 
+How do they see documentation as a whole? 
+Restructuring around documentation might need to be something that's instilled in the current team, 
+before splitting layers into microservices.
 </Notes>
 
 ---
