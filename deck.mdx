@@ -420,6 +420,7 @@ Martin Fowler wrote in _Monolith First_ the above quote
 # Who Owns What?
 
 ![](https://images.unsplash.com/photo-1562701447-8ec5d514a2a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80)
+***
 <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jentheodore?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jen Theodore"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
 <title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Jen Theodore</span></a>
 
@@ -432,7 +433,23 @@ Blurred lines of ownership across teams in a monolith can lead to some 'interest
 Without clear boundaries (offered by microservices), 
 it's easy for teams to step on other team's toes, 
 find themselves building features without clear decision making, 
-and ultimatly stagnating without hope of production deployment
+and ultimatly stagnating without hope of successuful production deployments
+
+Trust is a huge part of successful team ownership. 
+Teams that don't trust each other likely have a harder time defining parts of the product they own. 
+The less trust a team has the, more blurred these lines of ownership become.
+
+Increasing trust it come over night but, 
+can often times be witnessed in how vulnerable is each member of a team willing to be.
+
+- Self Awareness
+
+Each member, 
+using tools like DiSC can help each member of the team see how they are perceived by the world around them. 
+This can lead them to discussing how each other fits in with the overall team. 
+How their strengths improve and support the team, 
+along with how other's strengths may support their weakeness.
+
 </Notes>
 
 ---
@@ -445,17 +462,25 @@ and ultimatly stagnating without hope of production deployment
 Biting off the first piece of functionality might be the hardest part of this process. 
 Too often folks reach for the most painful/or most 'sticky' item that's causing issues.
 
-Due to this, the first approach here can be the end all of this whole process. 
-
 Using empathy is almost always the first move. 
 We log into our Slack channels and try to discern developers pain through reading chat ops or deploy channels. 
-However, if we want to avoid the failure into tiny groupings, 
-there is a much more concrete piece of EQ that can be utilized.
+However, if we want to avoid the failure of tiny groupings, 
+there is a much more concrete piece of emotional intelligence that can be utilized.
 
-Self-awareness
+- Social Skills
 
 Sometimes called event storming, 
+this methodology
+involves discovering key domain events and plotting them along a time series.
 this is an integral part of Domain Driven Design and often times what small groups of developers do prior to breaking a monolith apart. 
+
+It just can't work without utilizing key domain experts from accross the company. 
+One of the key takeaways of almost all event storming sessions is the conversation between participants. 
+This shared knowledge is key to future modeling processes, 
+software that might fall out of these ideas, 
+and a better understanding of the current and future business processes.
+
+None of this is possible without the convergence of domain experts and effective social skills during this process of 'event storming'.
 
 </Notes>
 
@@ -472,8 +497,27 @@ Often times the best way to do this is to use a term known as 'outside-in' think
 This means that we think of solutions from the point of the consumer first. 
 Afterwards, work your way backwards to implement the service contracts.
 
-This is a classic use of empathy and something that I advocated for in building API's. 
-Coincidentally, in my past two SolidusConf talks.
+- Empathy
+
+This is a classic use of empathy and something that I advocated for actively in the past 5 years 
+and coincidentally, in my past two SolidusConf talks.
+However, 
+empathy is by far one of the hardest tactics of the emotional intelligence belt to master.
+
+Outside-in thinking can be distilled to the idea of:
+
+> seeing issues from from multiple perspectives (not only your own)
+
+Intel's CEO Andy Grove is one of the most well known outside in thinkers. 
+He was (he died in 2016) known for pushing Intel's management to constantly be anticipating changes in their corporate landscape. 
+The result of this? Intel pivoted somewhat early on from memory storage to semi conductors (and we know the rest of the story).
+
+When designing interfaces for your first or next microservices, 
+be thinking about the API layer from a customer's perspective. 
+Noodle on what information should be pushed away from these consumers 
+as much as the shape of responses and required inputs.
+
+How can you as a designer anticipate the changing landscape like Andy Grove did for Intel all those years ago?
 </Notes>
 
 ---
