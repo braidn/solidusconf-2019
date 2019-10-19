@@ -532,12 +532,30 @@ And when the idea to move to micrervices emerges,
 everyone will want to re-write the world in Rust...
 or Elm. 
 
+- Self Regulation
+
 Understanding that team churn is a very real thing that all organizations deal with, 
 means being conservative when choosing languages for a new service. 
 Build the service using some language that the team is currently 'good' at. 
 
 If the use case of the service grows beyond the capabilities of the language or platform, 
-the service layer should be small enough that a rewrite in rust is feasable.
+the service layer should be small enough that a rewrite in Rust is feasable.
+Saying that though guage how much interest the current team has in emerging languages.
+
+Weighting these decisions before jumping into the microservices pool is a great demonstration of self regulation
+
+- Motivation
+
+The opposite of the above may be useful in weighing this move as well.
+
+Poke around the public repositories that fellow engineers have on GitHub or GitLab. 
+Namely, those that have high commit activity outside of work hours. 
+These are the individuals that are displaying motivation in the exploration of potentially powerful new languages.
+
+They find playing with these languages deeply fullfilling (who doesn't) 
+and may have great ideas about how they can be used in the next performance strained service.
+
+
 </Notes>
 
 ---
@@ -545,20 +563,60 @@ the service layer should be small enough that a rewrite in rust is feasable.
 # A Package For All
 
 <Notes>
-# Solution 5
+## Solution 5
 
 When's the last time that we have published something to GemFury, GitHub or RubyGems? 
 With packaging dependencies and publishing them to consumers, 
 we create clear boundaries not only in our service layer but in our shareable code.
 
 With services running in all kinds of different environments, 
-or simply deployed 'elsewhere', 
 having sharable, 
 well tested and specific dependencies allows teams to not only move faster but, 
-Makes sharing code across applications much more doable. 
+Makes sharing code across applications much more possible. 
 No longer is a change to a piece of code going to create havoc in fulfillment. 
 
 Fullfillment can continue to use version 1.1 while the Aquisition team uses a more recent tagged version.
+
+## Motivation X Empathy
+
+This is a key success metric to how ready a team is to move to microservices however, 
+it does blur the lines between two sections of emotional intelligence.
+
+## Motivation
+
+In one space, it takes a lot of time to be a good package maintainer, 
+even if that package is only consumed internally. 
+There are decisions around versioning numbers, 
+how and where the package will be available 
+(does everyone have access to the GitHub package repository or GitLab's package registry?), 
+and so much more. 
+
+Are your current developers versed in package dispersal, 
+do they maintain open source libraries with these requirements, 
+etc?
+
+If so then they definitely have the motivation and expertise to do so within the organization. 
+If not? 
+Well then this might be a wonderful opportunity to grow and educate the team.
+
+## Empathy
+
+When building consumable code for other developers, 
+be it a tiny module to a full framework, 
+understanding how to be a mindful or empathic package producer can be tricky at best. 
+
+Let's take NPM and Node Modules as an example:
+
+1. How do you build something that is inherently small? 
+The heft and weight of many node modules is a bit rediculous. 
+1. This leads to where will this code run? 
+Can this module be published as well to a CDN and pulled into the front end asynchronously?
+1. What are the public methods to your package? 
+What's the smallest API layer that you can release while still thinking about how the consumer will use the code?
+
+These are just some of the myriad of human specific questions that package maintainers need to think about before 
+they ever type `npm publish`
+
 </Notes>
 
 ---
@@ -566,7 +624,7 @@ Fullfillment can continue to use version 1.1 while the Aquisition team uses a mo
 # Where's Your Documentation At?
 
 <Notes>
-# Solution 6 (Final)
+## Solution 6 (Final)
 
 In many scenarios, 
 an application is reliant on a constant DB to DB connection to manage interactions throughout the App. 
@@ -579,14 +637,27 @@ How does your team currently document the existing API layer?
 How do they see documentation as a whole? 
 Restructuring around documentation might need to be something that's instilled in the current team, 
 before splitting layers into microservices.
+
+## Social Skills
+
+Building useful documentation is all about those social skills. 
+Communicating intent of your services API layer isn't going to be a trivial process. 
+This coupled with understanding how your users will consume your documentation, 
+propose edits or updates, 
+and even interact with perhaps a fake or development version of your service, 
+all lead back to clear and concise communication.
+
+If you haven't seen my previous talk on Empathic REST API's from 2016, 
+that talk also had some wonderful findings that intersected documentation and empathy.
+
 </Notes>
 
 ---
 
-# Can You Invoke JavaScript
+# 💯 Percent Test Coverage
 
 <Notes>
-# Solution 7 (Bonus)
+## Solution 7 (Bonus)
 
 Or how robust is your test suite, 
 especially the integration and feature part? 
@@ -594,6 +665,24 @@ Although we mentioned earlier that microservices isn't a rewrite...
 It is to some extent. 
 How will you know that your ultimate implementation works without an existing and 
 healthy test suite?
+
+## All Of Them.
+
+The fascinating aspect of automated testing and 
+especially a good, 
+well groomed and 
+above all else: 
+fast test suite is that it intersects all five parts of emotional intelligence:
+
+1. _Self Awareness_: Developers need to take stock of how they feel when they run a single file in the suite or the whole suite. 
+Is it painful? 
+Do the tests not function without connection to the internet? 
+What feeling does the suite invoke across the entire organization? 
+1. _Self Regulation_: Do developers make rational choices with information (ie Failed Builds) from the test suite? 
+1. _Social Skills_: Are developers open to talking about slow tests? 
+Is testing methodologies or betterment something that's spoken about over the lunch table? 
+1. _Empathy_: To understand how slow tests or broken builds might adversely affect the rest of the team.
+1. _Motivation_: And lastly, how motivated are developers to dig into particularly sticky parts of the test suite?
 
 </Notes>
 
@@ -606,6 +695,10 @@ healthy test suite?
 <h1>@braidn</h1>
 </Appear>
 </Horizontal>
+
+<Notes>
+Twitter DM's are always open, ask questions whenever you feel comfortable
+</Notes>
 
 ---
 
@@ -655,6 +748,50 @@ quality EQ based articles are few and far apart.
 - https://samnewman.io/
 - Domain Driven Design (Book) 
 - Domain Driven Design Distilled (Book)
+
+---
+
+<Image
+src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tobias_L%C3%BCtke%2C_Shopify.jpg/1200px-Tobias_L%C3%BCtke%2C_Shopify.jpg'
+style={{
+display: 'flex'
+}}
+>
+</Image>
+
+<Notes>
+Who know's who this person is? Anyone?
+(Tobi Lootkah)
+</Notes>
+
+---
+
+<Image
+src='https://faastruby.io/wp-content/uploads/2019/03/sticker-positive.png'
+style={{
+display: 'flex',
+backgroundPosition: 'top'
+}}
+>
+</Image>
+
+<Notes>
+And who has played with FaastRuby before a few months ago?
+
+It was a very accessible way to write Ruby or Crystal (_highlight this by raising your finger_)
+functions that were extremely easily deployed and ran on demand.
+</Notes>
+
+---
+
+<Image
+src='https://p-g9FMe8.b0.n0.cdn.getcloudapp.com/items/nOuWDpzv/toby-cryrstal-2.png?v=d8fd1539e18134ac0229233378d66bfb'
+style={{
+display: 'flex',
+backgroundPosition: 'top'
+}}
+> 
+</Image>
 
 ---
 
