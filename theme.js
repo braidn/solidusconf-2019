@@ -9,14 +9,14 @@ export default {
   },
   styles: {
     blockquote: {
-      fontStyle: 'italic',
-      display: 'block',
-      borderWidth: '2px 0',
-      borderStyle: 'solid',
-      borderColor: '#eee',
-      padding: '1.5em 0 0.5em',
-      margin: '1.5em 0',
-      position: 'relative'
+      maxWidth: '2000px',
+      margin: '20px',
+      padding: '10px',
+      textAlign: 'center',
+      color: '#757575',
+      borderLeft: '10px solid #C91D0D',
+      borderTopLeftRadius: '20px',
+      borderBottomLeftRadius: '20px',
     }
   }
 }
