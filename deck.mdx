@@ -36,17 +36,20 @@ No worries all, the title is definitely a 'work in progress'
 If you haven't heard of Glossier before, 
 We are a skin-first beauty and ecommerce company.
 Some of us have spoken at past Spree and Solidus conferences throughout the years.
+
 For my specific day to day,
 I spend my time making our internal tooling a wonderful experience but, 
-have worked on almost all teams throughout the engineering organization.
+have worked on almost all teams throughout the engineering organization at Glossier.
 
 </Notes>
 
 ---
 
-<Appear>
-<h1>Why No Tech Talks?</h1>
-</Appear>
+<Horizontal>
+
+# Why No Tech Talks
+
+</Horizontal>
 
 <Notes>
 
@@ -546,6 +549,8 @@ this quote exemplifies how the characters of teams get embodied in the software 
 
 The rest of the talk will answer how the 5 parts of emotional intelligence help inform software teams 
 to build and designs successuful starts to microservices.
+In many ways these next examples could be considered pre-code. 
+They are integral
 
 </Notes>
 
@@ -579,11 +584,11 @@ each member of a team is willing to be.
 - Self Awareness
 
 Each member, 
-using tools like DiSC, 
-can teach a team how everyone else on the team percieves the world
-This can lead them to discussing how each other fits in with the overall team. 
+using assessment tools like DiSC, 
+can teach other team members how everyone else on the team percieves the world.
+This can lead members to discuss how each other fits in with the overall team. 
 How their strengths improve and support the team, 
-along with how other's strengths may support their weakeness.
+along with how other's strengths may support their weaknesses.
 
 </Notes>
 
@@ -642,12 +647,27 @@ However,
 empathy is by far one of the hardest tactics of the emotional intelligence belt to master.
 Outside-in thinking can be distilled into a simple mental framework of 
 
-_seeing issues from from multiple perspectives (not only your own)_
+_look at issues from multiple perspectives (not only your own)_
+
+</Notes>
+
+---
+
+<Split>
+
+A Story
+
+![](https://s3.amazonaws.com/digitaltrends-uploads-prod/2013/07/intel-logo.jpg)
+
+</Split>
+
+<Notes>
 
 Intel's CEO Andy Grove is one of the most well known outside in thinkers. 
 He was (he died in 2016) known for pushing Intel's management to constantly be anticipating changes in their corporate landscape. 
 The result of this? 
 Intel pivoted somewhat early on from memory storage to semi conductors (and we know the rest of the story).
+
 When designing interfaces for your first or next microservice, 
 be thinking about the API layer from a customer's perspective. 
 Noodle on what information should be pushed away from these consumers 
@@ -684,6 +704,20 @@ the service layer should be small enough that a rewrite in Rust is feasable.
 Saying that though, guage how much interest the current team has in emerging languages.
 Weighting these decisions before jumping into the microservices pool is a great demonstration of self regulation
 
+</Notes>
+
+---
+
+<Image
+src='https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Fsharp%2C_Logomark%2C_October_2014.svg/1200px-Fsharp%2C_Logomark%2C_October_2014.svg.png'
+style={{
+display: 'flex'
+}}
+>
+</Image>
+
+<Notes>
+
 - Motivation
 
 The opposite of the above may be useful in weighing this move as well.
@@ -717,11 +751,6 @@ Makes sharing code across applications much more possible.
 No longer is a change to a piece of the account page going to create havoc in fulfillment. 
 Fullfillment can continue to use version 1.1 while the Aquisition team uses a more recent tagged version.
 
-- Motivation X Empathy
-
-This is a key success metric to how ready a team is to move to microservices however, 
-it does blur the lines between two sections of emotional intelligence.
-
 - Motivation
 
 In one space, it takes a lot of time to be a good package maintainer, 
@@ -735,23 +764,6 @@ do they maintain open source libraries with these requirements?
 If so then they definitely have the motivation and expertise to do so within the organization. 
 If not? 
 Well then this might be a wonderful opportunity to grow and educate the team.
-
-- Empathy
-
-The second part of emotional intelligence that comes with this need is Empathy.
-When building consumable code for other developers, 
-understanding how to be a mindful or empathic package producer can be tricky at best. 
-Let's take NPM and Node Modules as an example:
-
-1. How do you build something that is inherently small? 
-The heft and weight of many node modules is a bit rediculous. 
-1. Next up is where will this code acutally run? 
-Can this module be published as well to a CDN and pulled into the front end asynchronously?
-1. And finally what are the public methods to your package? 
-What's the smallest API layer that you can release while still thinking about how the consumer will use the code?
-
-These are just some of the myriad of human specific questions that package maintainers need to think about before 
-they ever type `npm publish`
 
 </Notes>
 
@@ -814,13 +826,10 @@ It is to some extent.
 How will you know that your new implementation works without an existing and 
 healthy test suite?
 
-- All Of Them.
-
-The fascinating aspect of automated testing and 
-especially a good, 
+A good, 
 well groomed and 
 above all else: 
-fast test suite is that it intersects all five parts of emotional intelligence:
+fast test suite actually intersects all five parts of emotional intelligence:
 
 1. _Self Awareness_: Developers need to take stock of how they feel when they run a single file in the suite or the whole suite. 
 Is it painful? 
@@ -887,9 +896,12 @@ display: 'flex'
 </Image>
 
 <Notes>
+
 More than anything,
 I would love to thank Glossier for all they do for the Ruby based E-commerce community. 
-With Solidus and then with Spree.
+With Solidus and then with Spree, 
+there's so much going on in this space and Glossier is excited to be a part of it.
+
 </Notes>
 
 ---
@@ -962,6 +974,9 @@ display: 'flex'
 <Notes>
 
 Who know's who this person is? Anyone?
+
+_wait_
+
 his name is Tobi Lootkah and he owns a little startup called "Shopify"
 
 </Notes>
@@ -983,8 +998,8 @@ And who has played with FaastRuby before a few months ago?
 It was a very accessible way to write Ruby or Crystal (_highlight this by raising your finger_)
 functions that were extremely easily deployed 
 and ran on demand.
-Very much like what Zeit is for the JavaScript/Functions as a Service space. 
-FaastRuby had a very Heroku like feel to it which all of us should be familiar with.
+Very much like what Zeit is for the JavaScript/Functions as a service, 
+or Heroku is for more 'traditional Ruby apps'
 
 </Notes>
 
@@ -1003,7 +1018,7 @@ backgroundPosition: 'top'
 
 As of a few days ago Tobi mentioned this.
 Big things are happening in this space. 
-Spotify is looking to further break up their monolith into manageable, 
+Shopify is looking to further break up their monolith into manageable, 
 Ruby or Ruby like chunks.
 I, for one am excited to see what's next for Ecommerce in Ruby.
 
