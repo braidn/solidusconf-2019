@@ -4,7 +4,8 @@
   "description": "",
   "repository": "https://github.com/braidn/solidusconf-2019",
   "scripts": {
-    "go": "mdx-deck deck.mdx"
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx"
   },
   "author": "",
   "license": "ISC",
